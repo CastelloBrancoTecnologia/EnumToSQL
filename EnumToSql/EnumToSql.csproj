@@ -18,6 +18,11 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>True</IncludeSymbols>
+    <PackageId>CastelloBranco.EnumToSql</PackageId>
+    <AssemblyVersion>2410.6.0009.3</AssemblyVersion>
+    <Product>CastelloBranco.EnumToSql</Product>
+    <AssemblyName>CastelloBranco.EnumToSql</AssemblyName>
+    <RootNamespace>CastelloBranco.EnumToSql</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
