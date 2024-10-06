@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>Castello Branco Tecnologia LTDA</Company>
+    <Description>Biblioteca para sincronização de Enums em codigo com o Database</Description>
+    <Copyright>Castello Branco Tecnologia LTDA</Copyright>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <Title>CastelloBranco.EnumToSql</Title>
+    <Authors>CastelloBrancoTecnologia</Authors>
+    <PackageProjectUrl>https://github.com/CastelloBrancoTecnologia/EnumToSql</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/CastelloBrancoTecnologia/EnumToSql</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.8" />
+  </ItemGroup>
+
+	<Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec">
+		<Message Text="Push NuGet Package to NuGet Feed" Importance="high"></Message>
+		
+		<Exec Command="$(ProjectDir)..\..\publicanuget.cmd &quot;$(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg&quot;"></Exec>
+	</Target>
+
+	
+</Project>
