@@ -1,4 +1,4 @@
-# CBT.EnumToSql
+# EnumToSql
 
 EnumToSql is a simple library that automatically synchronizes enums in your .NET application with a relational database, particularly SQLite. This is useful when you need to ensure that your database always reflects the values defined in your enums without manual updates.
 
